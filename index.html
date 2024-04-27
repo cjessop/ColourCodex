@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RGB Color Code Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Color Codex</h1>
+    </nav>
+  </header>
+  <main>
+    <div id="app">
+      <div id="color-display"></div>
+      <div id="color-controls">
+        <div class="sliders">
+          <div>
+            <label for="red">Red:</label>
+            <input type="range" id="red" name="red" min="0" max="255" value="0">
+            <span id="red-value">0</span>
+          </div>
+          <div>
+            <label for="green">Green:</label>
+            <input type="range" id="green" name="green" min="0" max="255" value="0">
+            <span id="green-value">0</span>
+          </div>
+          <div>
+            <label for="blue">Blue:</label>
+            <input type="range" id="blue" name="blue" min="0" max="255" value="0">
+            <span id="blue-value">0</span>
+          </div>
+        </div>
+        <div id="color-code">
+          <label for="rgb-code">RGB Code:</label>
+          <input type="text" id="rgb-code" name="rgb-code" readonly>
+          <button id="copy-btn">Copy</button>
+        </div>
+
+        <div id="palette-container">
+            <h2>Color Palette</h2>
+            <div id="palette"></div>
+            <button id="add-palette-btn">Add Color</button>
+        </div>
+
+        <div id="palette-options">
+            <label for="palette-select">Select Palette:</label>
+            <select id="palette-select">
+              <option value="" disabled selected>Select a Palette</option>
+              <!-- Palette options will be added dynamically -->
+            </select>
+          </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; ColorCodex 2023</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
